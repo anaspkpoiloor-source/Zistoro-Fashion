@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zistoro | Modest, minimal women's wear from Kerala</title>
+<meta name="description" content="Zistoro: minimal, modest and modern everyday wear for women. Co-ord sets, kurtis and dresses. Order on WhatsApp.">
+<meta property="og:title" content="Zistoro | Wear your style">
+<meta property="og:description" content="Minimal, modest and modern everyday wear for women in Kerala.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#F7F3EC;--ink:#111111;--gold:#A68A5B;--taupe:#B8AA96;--line:#DDD4C4;--serif:"Cormorant Garamond","Cormorant",Georgia,serif;--sans:"Manrope","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--ivory);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08}
+h2{font-size:clamp(30px,5vw,46px);margin-bottom:10px}
+.lede{color:#4a463f;max-width:46ch}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:var(--ivory);border-bottom:1px solid var(--line)}
+.bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:64px}
+.logo{display:block;line-height:0}
+.logo img{height:38px;width:auto;display:block}
+nav{display:flex;gap:30px;font-size:15px}
+nav a,.hdr-wa{text-decoration:none;color:#3a362f}
+nav a:hover,.hdr-wa:hover{color:var(--gold)}
+.hdr-wa{justify-self:end;font-size:14px;letter-spacing:.04em;border-bottom:1px solid var(--gold);padding-bottom:1px}
+@media(max-width:700px){.bar{display:flex;justify-content:space-between}nav{gap:16px}nav a.hide-m,.hdr-wa{display:none}}
+
+/* buttons */
+.btn{display:inline-block;padding:13px 26px;border:1px solid var(--ink);background:var(--ink);color:var(--ivory);text-decoration:none;font-size:15px;letter-spacing:.03em;transition:background .2s,color .2s}
+.btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
+
+/* hero */
+.hero{padding:0;position:relative;overflow:hidden;background:#EADFCF}
+.hero-bg{position:relative;aspect-ratio:4/3;overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:100% 50%;display:block;animation:settle 3s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy{padding:34px 20px 30px;position:relative;z-index:1}
+.eyebrow{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:#3a362f}
+.hero h1{margin:16px 0 0;font-size:clamp(46px,12vw,96px);line-height:1;letter-spacing:.03em;text-transform:uppercase}
+.hero h1 em{display:block;text-transform:none;letter-spacing:0;font-style:italic;font-size:.92em;margin-top:.04em}
+.hero-line{font-family:var(--serif);font-size:clamp(19px,2.6vw,26px);margin:22px 0 28px;color:#2c2924}
+.hero .btn{text-transform:uppercase;letter-spacing:.16em;font-size:13px;padding:16px 28px}
+.hero .btn span{margin-left:10px}
+.hero-copy>*{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy>*:nth-child(2){animation-delay:.12s}.hero-copy>*:nth-child(3){animation-delay:.24s}.hero-copy>*:nth-child(4){animation-delay:.36s}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.07)}to{transform:scale(1)}}
+@media(min-width:860px){
+  .hero{display:flex;align-items:center;min-height:clamp(540px,calc(100vh - 64px),760px)}
+  .hero-bg{position:absolute;inset:0;aspect-ratio:auto}
+  .hero-bg img{object-position:72% 50%}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(243,235,224,.94) 0,rgba(243,235,224,.62) 30%,rgba(243,235,224,0) 56%)}
+  .hero-copy{padding:60px 20px;width:100%;max-width:1180px;margin:0 auto}
+  .hero-copy>*{max-width:520px}
+}
+
+/* tone placeholder + images */
+.ph,.ph img{width:100%;height:100%;display:block;object-fit:cover}
+.ph{position:absolute;inset:0}
+.ph.two{transition:opacity .35s}
+.card:hover .ph.two{opacity:1}
+.ph.two{opacity:0}
+
+/* shop */
+section{padding:64px 0}
+.shop{border-top:1px solid var(--line)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 28px}
+.chip{border:1px solid var(--ink);background:transparent;padding:6px 16px;font-size:14px}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--ivory)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 14px}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr);gap:44px 22px}}
+.card{display:flex;flex-direction:column;min-width:0}
+.card .img{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--taupe)}
+.track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;height:100%;scroll-snap-align:start;scroll-snap-stop:always;border:0;padding:0;background:none;position:relative;cursor:pointer}
+.slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:36px;height:36px;border:0;background:rgba(247,243,236,.92);font-size:22px;line-height:1;opacity:0;transition:opacity .2s}
+.nav.prev{left:8px}.nav.next{right:8px}
+.card:hover .nav,.nav:focus-visible{opacity:1}
+@media(hover:none){.nav{display:none}}
+.dots{position:absolute;left:0;right:0;bottom:10px;display:flex;justify-content:center;gap:6px;pointer-events:none}
+.dots i{width:18px;height:2px;background:rgba(255,255,255,.55);box-shadow:0 0 3px rgba(0,0,0,.35)}
+.dots i.on{background:#fff}
+.info{display:block;width:100%;border:0;background:none;text-align:left;padding:0}
+.card h3{font-size:21px;margin-top:12px}
+.card .meta{display:flex;justify-content:space-between;gap:10px;font-size:15px;color:#4a463f;margin-top:2px}
+.card .price{color:var(--ink)}
+.empty{color:#4a463f}
+
+/* order steps */
+.how{background:var(--ink);color:var(--ivory)}
+.how .lede{color:#cfc7b8}
+.steps{list-style:none;display:grid;gap:26px;margin-top:34px}
+@media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr);gap:40px}}
+.steps li{border-top:1px solid #4a463f;padding-top:16px}
+.steps b{font-family:var(--serif);font-weight:400;font-size:40px;color:var(--gold);display:block;line-height:1}
+.steps p{margin-top:8px}
+
+/* size + faq */
+.two-col{display:grid;gap:44px}
+@media(min-width:860px){.two-col{grid-template-columns:1fr 1fr;gap:80px}}
+table{border-collapse:collapse;width:100%;margin-top:18px;font-size:15px}
+th,td{padding:10px 8px;text-align:left;border-bottom:1px solid var(--line)}
+th{font-weight:500}
+.note{font-size:14px;color:#4a463f;margin-top:12px}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-family:var(--serif);font-size:20px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-family:var(--sans)}
+details[open]>summary::after{content:"–"}
+details p{margin-top:10px;color:#4a463f;max-width:56ch}
+
+/* about + insta */
+.about{background:#EFE8DB}
+.about p{font-size:clamp(20px,3vw,28px);font-family:var(--serif);max-width:34ch;line-height:1.35}
+.insta{text-align:center;padding:56px 0}
+.insta a{font-family:var(--serif);font-size:clamp(26px,5vw,44px);text-decoration:none;border-bottom:1px solid var(--gold)}
+footer{border-top:1px solid var(--line);padding:28px 0 90px;font-size:14px;color:#4a463f}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+
+/* floating whatsapp */
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;background:#1f6f43;color:#fff;text-decoration:none;padding:12px 18px;font-size:15px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.fab:hover{background:#17562f}
+
+/* dialogs */
+dialog{border:0;background:var(--ivory);color:var(--ink);max-width:880px;width:calc(100% - 24px);max-height:92vh;margin:auto;padding:0;overflow:auto}
+dialog::backdrop{background:rgba(17,17,17,.55)}
+.q{display:grid}
+@media(min-width:720px){.q{grid-template-columns:1fr 1fr}}
+.q .pic{position:relative;aspect-ratio:4/5;background:var(--taupe)}
+.q .info{padding:26px 24px 28px}
+.q h3{font-size:30px}
+.q .price{font-size:20px;margin:6px 0 12px}
+.q .row{margin-top:18px}
+.q label,.q .lab{font-size:14px;color:#4a463f;display:block;margin-bottom:6px}
+.sizes{display:flex;gap:8px;flex-wrap:wrap}
+.sz{min-width:46px;padding:8px 12px;border:1px solid var(--ink);background:transparent}
+.sz[aria-pressed=true]{background:var(--ink);color:var(--ivory)}
+.q .btn{width:100%;text-align:center;margin-top:22px}
+.x{position:absolute;top:8px;right:8px;z-index:2;width:40px;height:40px;border:0;background:var(--ivory);font-size:22px;line-height:1}
+.thumbs{display:flex;gap:8px;padding:8px 0 0}
+.thumbs button{width:64px;aspect-ratio:4/5;border:1px solid var(--line);padding:0;background:none;overflow:hidden}
+.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.det{margin:12px 0 0 18px;font-size:15px;color:#3a362f}
+.err{color:#9b1c31;font-size:14px;margin-top:8px;min-height:1.2em}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* premium typography */
+body{letter-spacing:.012em}
+h1,h2,h3{font-weight:400}
+h2{font-size:clamp(36px,5.6vw,58px);line-height:1.05;letter-spacing:.005em}
+.lede{font-size:17px;font-weight:300;color:#3f3a32}
+nav a{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase}
+.hdr-wa{font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.btn{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;padding:15px 28px}
+.chip{font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px}
+.eyebrow{font-size:12px;letter-spacing:.4em}
+.hero h1{font-size:clamp(50px,12.5vw,104px);line-height:.98;letter-spacing:.07em}
+.hero h1 em{font-weight:300;letter-spacing:.01em;font-size:.95em}
+.hero-line{font-style:italic;font-size:clamp(22px,2.8vw,30px)}
+.hero .btn{font-size:12.5px;letter-spacing:.18em;padding:17px 30px}
+.card h3{font-size:25px;font-weight:500;margin-top:14px;line-height:1.15}
+.card .meta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6a6358;margin-top:6px;align-items:baseline}
+.card .price{font-size:15px;letter-spacing:.04em;font-weight:500;text-transform:none;color:var(--ink)}
+.steps b{font-weight:300;font-size:56px;font-variant-numeric:lining-nums}
+.steps p{font-size:17px}
+summary{font-size:23px;font-weight:500}
+.about p{font-size:clamp(25px,3.5vw,36px);font-style:italic;line-height:1.3}
+.insta a{font-style:italic}
+.q h3{font-size:38px;font-weight:500;line-height:1.05}
+.q .price{font-family:var(--sans);font-size:18px;letter-spacing:.04em}
+th{font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.sz{font-size:13px;letter-spacing:.08em}
+.nb,.hero h1 em{white-space:nowrap}
+.hero h1{font-size:clamp(46px,11vw,96px)}
+.fab{font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:14px 20px}
+/* keep long names clear of the close button */
+.q h3{padding-right:48px}
+@media(max-width:480px){.hero .btn{padding:14px 18px;font-size:12px;letter-spacing:.14em}}
+
+
+/* header v2: menu and shopping icons */
+.bar{grid-template-columns:auto 1fr auto}
+nav{justify-self:center;align-items:center;gap:30px}
+nav a,.dd-btn{font:inherit;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#3a362f;text-decoration:none;background:none;border:0;padding:8px 0;cursor:pointer;border-bottom:0}
+nav a:hover,.dd-btn:hover{color:var(--gold)}
+.dd{position:relative}
+.dd-menu{display:none;position:absolute;left:-18px;top:100%;min-width:220px;background:var(--ivory);border:1px solid var(--line);padding:8px 0;box-shadow:0 10px 24px rgba(0,0,0,.08);z-index:25}
+.dd:hover .dd-menu,.dd:focus-within .dd-menu{display:block}
+.dd-menu a{display:block;padding:10px 18px;white-space:nowrap}
+.tools{display:flex;align-items:center;gap:2px}
+.ic{position:relative;width:42px;height:42px;display:grid;place-items:center;border:0;background:none}
+.ic svg{width:22px;height:22px;fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ic:hover svg{stroke:var(--gold)}
+.badge{position:absolute;top:3px;right:1px;min-width:17px;height:17px;padding:0 4px;border-radius:9px;background:var(--ink);color:var(--ivory);font-size:10px;letter-spacing:0;display:grid;place-items:center;line-height:1}
+.badge:empty{display:none}
+.burger{display:none}
+@media(max-width:979px){nav{display:none}.burger{display:grid}}
+
+/* heart on product cards and popup */
+.wish{position:absolute;top:10px;right:10px;z-index:2;width:38px;height:38px;border:0;border-radius:50%;background:rgba(247,243,236,.92);display:grid;place-items:center}
+.wish svg,.wl svg{width:19px;height:19px;fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.wish[aria-pressed=true] svg,.wl[aria-pressed=true] svg{fill:#A3243B;stroke:#A3243B}
+.wl{margin-top:14px;border:0;background:none;display:inline-flex;gap:8px;align-items:center;font-size:14px;padding:6px 0}
+.wl span{text-decoration:underline;text-underline-offset:3px}
+.q .btn+.btn{margin-top:12px}
+
+/* side drawer: cart, wishlist, profile, menu */
+dialog.drawer{margin:0 0 0 auto;width:min(430px,100%);max-width:none;height:100dvh;max-height:none;overflow:hidden;flex-direction:column}
+dialog.drawer[open]{display:flex;animation:drIn .35s cubic-bezier(.2,.7,.2,1)}
+@keyframes drIn{from{transform:translateX(28px);opacity:0}to{transform:none;opacity:1}}
+.dr-head{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line)}
+.dr-head h2{font-size:32px;margin:0}
+.dr-head .x{position:static}
+.dr-body{flex:1;overflow:auto;padding:4px 22px 18px}
+.dr-foot{padding:18px 22px 22px;border-top:1px solid var(--line)}
+.dr-foot:empty{display:none}
+.dr-foot .btn{width:100%;text-align:center}
+.ln{display:grid;grid-template-columns:76px 1fr auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+.ln .th{width:76px;aspect-ratio:4/5;background:var(--taupe);overflow:hidden}
+.ln .th img{width:100%;height:100%;object-fit:cover;display:block}
+.ln b{font-family:var(--serif);font-weight:500;font-size:20px;line-height:1.15;display:block}
+.ln small{display:block;color:#5a554b;font-size:14px;margin-top:3px}
+.ln .acts{display:flex;gap:14px;align-items:center;margin-top:10px;flex-wrap:wrap}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--ink)}
+.qty button{width:32px;height:32px;border:0;background:none;font-size:18px}
+.qty span{min-width:28px;text-align:center;font-size:15px}
+.rm{border:0;background:none;font-size:24px;line-height:1;padding:2px 6px}
+.tot{display:flex;justify-content:space-between;font-family:var(--serif);font-size:26px;margin-bottom:6px}
+.empty-dr{padding:26px 0;color:#4a463f}
+.link{border:0;background:none;text-decoration:underline;text-underline-offset:3px;font-size:14px;padding:10px 0 0;display:block;margin:0 auto}
+.field{margin:16px 0}
+.field label{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#5a554b;margin-bottom:6px}
+.field input,.field textarea{width:100%;font:inherit;padding:11px 12px;border:1px solid var(--ink);background:transparent;color:var(--ink);border-radius:0}
+.field textarea{min-height:100px;resize:vertical}
+.pf-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:8px}
+.pf-links button{border:0;background:none;text-decoration:underline;text-underline-offset:3px;font-size:14px;padding:6px 0}
+.menu-list a{display:block;padding:15px 0;border-bottom:1px solid var(--line);font-family:var(--serif);font-size:28px;text-decoration:none;color:var(--ink)}
+.menu-list .menu-h{display:block;padding:15px 0 6px;font-family:var(--serif);font-size:28px}
+.menu-list .menu-sub{font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:11px 0 11px 16px;color:#4a463f;border-bottom:1px solid var(--line)}
+
+/* contact + footer links */
+.contact{border-top:1px solid var(--line);padding:56px 0 64px}
+.contact-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+
+/* typography: Cormorant Garamond for headings, Manrope for everything else */
+body{font-family:var(--sans);font-size:15px;line-height:1.7;font-weight:400;letter-spacing:.005em}
+h1,h2{font-family:var(--serif);font-weight:400}
+h2{font-size:clamp(32px,4.6vw,48px);line-height:1.08;letter-spacing:.005em}
+.lede{font-size:15px;font-weight:400;color:#4a463f;line-height:1.7}
+nav a,.dd-btn{font-size:11.5px;letter-spacing:.15em;font-weight:500}
+.btn,.hero .btn{font-size:11.5px;letter-spacing:.16em;font-weight:500;padding:16px 28px}
+.chip{font-size:11px;letter-spacing:.13em;font-weight:500;padding:9px 18px}
+.eyebrow{font-size:11px;letter-spacing:.36em;font-weight:500}
+.hero-line{font-size:clamp(21px,2.6vw,28px);line-height:1.3}
+.card h3{font-family:var(--sans);font-size:15.5px;font-weight:500;letter-spacing:.01em;line-height:1.4;margin-top:14px}
+.card .meta{font-size:11px;letter-spacing:.13em;font-weight:500;color:#6a6358;margin-top:5px}
+.card .price{font-size:14.5px;font-weight:600;letter-spacing:.02em;font-variant-numeric:lining-nums}
+.q h3{font-family:var(--sans);font-size:24px;font-weight:500;line-height:1.25;letter-spacing:0;padding-right:48px}
+.q .price{font-family:var(--sans);font-size:18px;font-weight:600;letter-spacing:.02em;margin:8px 0 14px}
+.q p,.det{font-size:14.5px;line-height:1.7}
+.det{font-size:14px}
+.note,.err{font-size:13px;line-height:1.6}
+.q label,.q .lab{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.sz{font-size:12.5px;font-weight:500;letter-spacing:.06em}
+.wl{font-size:13px;font-weight:500}
+.dr-head h2{font-size:30px}
+.ln b{font-family:var(--sans);font-size:14.5px;font-weight:500;line-height:1.35}
+.ln small{font-size:13px}
+.tot{font-family:var(--sans);font-size:16px;font-weight:600;letter-spacing:.02em}
+.qty span,.rm{font-family:var(--sans)}
+.field label{font-size:11px;letter-spacing:.12em;font-weight:500}
+.menu-list a,.menu-list .menu-h{font-family:var(--sans);font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:17px 0}
+.menu-list .menu-h{padding-bottom:6px}
+.menu-list .menu-sub{font-size:12px;letter-spacing:.13em;padding:11px 0 11px 16px}
+.about p{font-size:clamp(20px,2.3vw,27px);line-height:1.4;max-width:38ch}
+.badge{font-size:10px;font-weight:600}
+.fab{font-size:11.5px;letter-spacing:.14em;font-weight:500}
+footer{font-size:13px}
+@media(max-width:480px){.hero .btn{padding:14px 18px;font-size:11px;letter-spacing:.13em}}
+
+/* footer links and info panels */
+.flinks{display:flex;gap:22px;flex-wrap:wrap}
+.flink,.link-inline{border:0;background:none;font:inherit;color:inherit;padding:0;cursor:pointer}
+.flink:hover{color:var(--gold)}
+.link-inline{text-decoration:underline;text-underline-offset:3px}
+.menu-list button{display:block;width:100%;text-align:left;border:0;background:none;color:var(--ink);cursor:pointer;font-family:var(--sans);font-size:14px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:17px 0;border-bottom:1px solid var(--line)}
+.steps{list-style:none;display:grid;gap:4px;margin-top:8px}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:6px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.steps b{font-family:var(--serif);font-weight:400;font-size:38px;line-height:1;color:var(--gold);font-variant-numeric:lining-nums}
+.steps p{margin:0;font-size:15px}
+.dr-body table{margin-top:18px;width:100%;font-size:14px}
+.dr-body th{font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.dr-body details{padding:0;border-bottom:1px solid var(--line)}
+.dr-body summary{font-family:var(--sans);font-size:15px;font-weight:500;padding:18px 0}
+.dr-body summary::after{font-size:22px;font-weight:300}
+.dr-body details p{margin:0 0 18px;font-size:14.5px;line-height:1.7;color:#4a463f}
+
+/* policies, footer, why, cards, mobile refinements */
+.fgrid{display:grid;gap:26px;grid-template-columns:repeat(3,minmax(0,1fr))}
+footer .wrap{display:block}
+footer{padding:44px 0 30px}
+.fcol h4{font-family:var(--sans);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:12px;color:var(--ink)}
+.fcol a,.fcol .flink{display:block;text-align:left;margin-bottom:8px;text-decoration:none;font-size:13.5px;color:#3a362f;overflow-wrap:anywhere}
+.fcol a:hover,.fcol .flink:hover{color:var(--gold)}
+.fcopy{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:#6a6358}
+.why{padding:56px 0;border-top:1px solid var(--line)}
+.why-grid{display:grid;gap:28px;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:26px}
+.why-grid>div{border-top:1px solid var(--gold);padding-top:16px}
+.why h3{font-size:24px;font-weight:500;line-height:1.15;margin-bottom:8px}
+.why p{font-size:14px;color:#4a463f;margin:0}
+.cue{display:inline-block;margin-top:9px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border-bottom:1px solid var(--gold);padding-bottom:2px}
+.card .info:hover .cue,.card .info:focus-visible .cue{color:var(--gold)}
+.piclabel{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#6a6358;margin:8px 0 0;min-height:1.2em}
+.policy a,.more{text-underline-offset:3px;white-space:nowrap}
+.dr-sub{font-family:var(--sans);font-size:15px;font-weight:600;margin:20px 0 4px;letter-spacing:.01em}
+.dr-body td,.dr-body th{padding:9px 6px}
+@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.fgrid{grid-template-columns:1fr 1fr}.fcol:nth-child(3){grid-column:1/-1}.why-grid{grid-template-columns:1fr;gap:20px}}
+@media(max-width:859px){
+  .hero-bg{aspect-ratio:16/11}
+  .hero-bg img{object-position:88% 50%}
+  .hero-copy{padding:20px 20px 26px}
+  .hero h1{margin-top:10px;font-size:clamp(40px,11.5vw,64px)}
+  .hero-line{margin:12px 0 18px}
+}
+@media(max-width:700px){
+  .fab{left:0;right:0;bottom:0;text-align:center;padding:12px 16px calc(12px + env(safe-area-inset-bottom));box-shadow:none;font-size:11.5px}
+  body{padding-bottom:calc(46px + env(safe-area-inset-bottom))}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Zistoro home"><img src="images/zistoro-logo.png" alt="Zistoro, wear your style"></a>
+    <nav aria-label="Main">
+      <a href="#shop" data-filter="new">New Drop</a>
+      <a href="#shop" data-filter="all">Shop</a>
+      <div class="dd"><button class="dd-btn" type="button" aria-haspopup="true">Collections</button><div class="dd-menu" id="ddMenu"></div></div>
+      <a href="#about">About</a>
+      <button class="dd-btn" type="button" data-open="faq">FAQ</button>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="tools">
+      <button class="ic" type="button" data-open="profile" aria-label="Profile"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></button>
+      <button class="ic" type="button" data-open="wish" aria-label="Wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9-9.3C2 8 4 5.5 7 5.5c1.9 0 3.3 1 5 3 1.7-2 3.1-3 5-3 3 0 5 2.5 4 5.7-1.5 4.7-9 9.3-9 9.3z"/></svg><span class="badge" id="bWish"></span></button>
+      <button class="ic" type="button" data-open="cart" aria-label="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="badge" id="bCart"></span></button>
+      <button class="ic burger" type="button" data-open="menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-bg"><img id="heroImg" alt=""></div>
+    <div class="hero-copy">
+      <p class="eyebrow" id="hEyebrow"></p>
+      <h1><span id="hTitle"></span><em id="hTitle2"></em></h1>
+      <p class="hero-line" id="hLine"></p>
+      <div><a class="btn" href="#shop"><span id="hBtn"></span><span>&rarr;</span></a></div>
+    </div>
+  </section>
+
+  <section class="shop" id="shop">
+    <div class="wrap">
+      <h2>Collections</h2>
+      <p class="lede">Tap a piece to see sizes and order it on WhatsApp.</p>
+      <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section class="why" id="why">
+    <div class="wrap">
+      <h2>Why ZISTORO?</h2>
+      <div class="why-grid">
+        <div><h3>Modest silhouettes</h3><p>Relaxed cuts with sleeves and lengths made for modest everyday dressing.</p></div>
+        <div><h3>Thoughtfully curated</h3><p>A considered edit of pieces, chosen for how they look and wear day to day.</p></div>
+        <div><h3>Everyday comfort</h3><p>Cotton fabrics and easy, elastic-waist pants for comfortable daily wear.</p></div>
+        <div><h3>Minimal, modern design</h3><p>Quiet colours, clean lines and one considered detail per piece.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <p>Zistoro began in Kerala with a simple idea: clothes that feel modest without feeling plain. Soft fabrics, quiet colours and cuts you can wear to class, to work or to a family visit.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="lede">Questions about a size, a colour or an order? Message us and we will reply on WhatsApp.</p>
+      <div class="contact-row">
+        <a class="btn" data-wa="Hi Zistoro, I have a question." href="#">Chat on WhatsApp</a>
+        <a class="btn ghost" id="instaLink" href="#" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <p class="note" id="contactLine"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fcol"><h4>Help</h4>
+        <button class="flink" type="button" data-open="order">How to order</button>
+        <button class="flink" type="button" data-open="sizes">Size guide</button>
+        <button class="flink" type="button" data-open="faq">FAQ</button></div>
+      <div class="fcol"><h4>Policies</h4>
+        <a href="shipping-policy.html">Shipping &amp; Delivery Policy</a>
+        <a href="return-replacement-policy.html">Return &amp; Replacement Policy</a></div>
+      <div class="fcol"><h4>Contact</h4>
+        <a id="fWa" href="#" data-wa="Hi Zistoro, I have a question.">WhatsApp</a>
+        <a id="fMail" href="#">Email</a>
+        <a id="fIg" href="#" target="_blank" rel="noopener">Instagram</a></div>
+    </div>
+    <p class="fcopy">&copy; <span id="yr"></span> Zistoro &middot; Wear Your Style</p>
+  </div>
+</footer>
+
+<a class="fab" data-wa="Hi Zistoro, I'd like to place an order." href="#">Order on WhatsApp</a>
+
+<dialog id="qv" aria-label="Product details"></dialog>
+<dialog id="drawer" class="drawer" aria-labelledby="drTitle">
+  <div class="dr-head"><h2 id="drTitle"></h2><button class="x" type="button" data-closedr aria-label="Close">&times;</button></div>
+  <div class="dr-body" id="drBody"></div>
+  <div class="dr-foot" id="drFoot"></div>
+</dialog>
+
+<script src="site-config.js"></script>
+<script>
+/* =====================================================
+   EDIT HERE. Everything customers see lives in this block.
+   ===================================================== */
+/* Contact details, dispatch/delivery times and the reporting window live in site-config.js (edit them there). */
+const CONFIG = {
+  email: ZIS.contact.email,
+  whatsapp: ZIS.contact.whatsapp,
+  instagram: ZIS.contact.instagram,
+  steps: [
+    "Pick a piece and your size.",
+    "Tap \u201cOrder on WhatsApp\u201d. Your choice is already typed in the message.",
+    "We confirm the price, delivery time and payment details with you on chat."
+  ],
+  sizeUnit: "",   // SIZE GUIDE UNIT: fill in once confirmed, e.g. "inches" or "cm". Shown only when measurements exist.
+  sizeNote: "Not sure about your size? Message us on WhatsApp.",
+  shipNote: "Shipping charge and delivery time are confirmed on WhatsApp before your order is finalized.",
+  shipLine: "Dispatch: " + ZIS.shipping.dispatchTime + ". Estimated delivery: " + ZIS.shipping.deliveryTime + ". This is an estimate, not a guaranteed date.",
+  returnNote: "No returns for change of mind or size selection. For damaged, defective or incorrect items, contact us within " + ZIS.returns.reportWindow + " of delivery.",
+  /* FAQ: [question, answer, optional link to the full policy] */
+  faq: [
+    ["Delivery locations", "We currently deliver to serviceable PIN codes across India. Delivery availability is confirmed before your order is finalized.", "shipping-policy.html"],
+    ["Dispatch and delivery time", "Dispatch: " + ZIS.shipping.dispatchTime + ". Estimated delivery: " + ZIS.shipping.deliveryTime + ". These are estimates, not guaranteed dates.", "shipping-policy.html"],
+    ["Shipping charge", "Shipping charges are confirmed with you on WhatsApp before your order is finalized.", "shipping-policy.html"],
+    ["Returns and replacements", "We do not accept returns for change of mind, styling preference or size selection. If you receive a damaged, defective or incorrect item, contact us within " + ZIS.returns.reportWindow + " of delivery with your order number and clear photographs, plus a continuous, unedited unboxing video where available. We will review your request and contact you with the next steps. This does not affect applicable consumer rights.", "return-replacement-policy.html"],
+    ["Payment", "Payment details are shared on WhatsApp once your order is confirmed."],
+    ["Do colours match the photos?", "Colours can look slightly different on different screens. To check a colour, message us on WhatsApp."]
+  ]
+};
+
+/* SIZE GUIDE, per product. Measurements are NOT filled in yet (shown as a dash).
+   To add them: sizeGuide: guide(["Bust","Top length","Waist","Pant length"], { S:["..","..","..",".."], M:[...], L:[...], XL:[...], XXL:[...] }, "optional verified fit note")
+   Use the same unit for every number and set CONFIG.sizeUnit above. Change the column names to suit the garment. */
+const SIZES = ["S","M","L","XL","XXL"];
+const guide = (columns, values = {}, fit = "") => ({columns, rows: SIZES.map(s => [s, ...(values[s] || columns.map(() => ""))]), fit});
+
+/* PRODUCTS: new:true shows a piece under "New Drop". Copy one block to add a piece, delete a block to remove one.
+   price: a number in rupees, or null to show "Ask for price".
+   images: file names inside the images folder, e.g. ["images/front.jpg","images/back.jpg"].
+           Leave [] to show the colour block until photos are ready. Second image shows on hover.
+   tones: two hex colours used for the colour block (main, accent).  */
+/* HERO: the big picture and words at the top of the page.
+   image: a photo in the images folder (wide photo, with empty space on the left for the words works best). */
+const HERO = {
+  image:"images/hero.jpg",
+  alt:"Zistoro cotton co-ord sets",
+  eyebrow:"New collection",
+  title:"Cotton",
+  title2:"Co-Ord Sets",
+  line:"Modest. Modern. Effortless.",
+  button:"Shop the collection"
+};
+
+const PRODUCTS = [
+  { id:"blue-floral", name:"Blue Floral Cotton Co-ord Set", category:"Co-ord sets", new:true, price:679,
+    colour:"Blue with crimson floral embroidery",
+    desc:"A touch of blue, a statement of effortless style. Matching top and pants with elegant floral embroidery, made to feel minimal, modest and modern.",
+    details:["Premium cotton","Elegant floral detailing","Matching top and pants","Sizes S to XXL"],
+    sizes:["S","M","L","XL","XXL"],
+    sizeGuide:guide(["Bust","Top length","Waist","Pant length"]),
+    imageLabels:["Front","Back","Folded pants"],
+    images:["images/blue-floral-1.jpg","images/blue-floral-2.jpg","images/blue-floral-3.jpg"],
+    tones:["#2E6B73","#A3243B"] },
+
+  { id:"rust-red", code:"ZIS-CO-002", name:"Rust Red Cotton Co-ord Set", category:"Co-ord sets", new:true, price:679,
+    colour:"Rust red with elegant floral embroidery",
+    desc:"Matching shirt and pants in warm rust red, finished with elegant floral embroidery. Minimal, modest and modern.",
+    details:["Cotton fabric","Elegant floral embroidery","Matching shirt and pants","Sizes S to XXL"],
+    sizes:["S","M","L","XL","XXL"],
+    sizeGuide:guide(["Bust","Top length","Waist","Pant length"]),
+    imageLabels:["Front","Back","Folded pants"],
+    images:["images/rust-red-1.jpg","images/rust-red-2.jpg","images/rust-red-3.jpg"],
+    tones:["#9A4A2E","#EFE6D2"] },
+
+  { id:"olive-green", code:"ZIS-CO-003", name:"Olive Green Cotton Co-ord Set", category:"Co-ord sets", new:true, price:679,
+    colour:"Olive green with elegant floral embroidery",
+    desc:"Effortless elegance in olive green. Matching shirt and pants with elegant floral embroidery, easy to wear every day.",
+    details:["Cotton fabric","Elegant floral embroidery","Matching shirt and pants","Sizes S to XXL"],
+    sizes:["S","M","L","XL","XXL"],
+    sizeGuide:guide(["Bust","Top length","Waist","Pant length"]),
+    imageLabels:["Front","Back","Folded pants"],
+    images:["images/olive-green-1.jpg","images/olive-green-2.jpg","images/olive-green-3.jpg"],
+    tones:["#6B6A5A","#EFE6D2"] },
+
+  { id:"blue-floral-kurti", code:"ZIS-KS-004", name:"Blue Floral Kurti Set", category:"Kurti sets", new:true, price:749,
+    colour:"Blue with white floral print",
+    desc:"Elegance in every detail, grace in every moment. A blend of floral charm and effortless elegance, thoughtfully chosen for your everyday style.",
+    details:["Floral prints","Cotton slub fabric","Coordinated kurti set","Sizes S to XXL"],
+    sizes:["S","M","L","XL","XXL"],
+    sizeGuide:guide(["Bust","Kurti length","Waist","Pant length"]),
+    imageLabels:["Full set","Kurti front","Kurti back","Pants","Dupatta","Details"],
+    images:["images/kurti-blue-1.jpg","images/kurti-blue-2.jpg","images/kurti-blue-3.jpg","images/kurti-blue-4.jpg","images/kurti-blue-5.jpg","images/kurti-blue-6.jpg"],
+    tones:["#2A7C9B","#F1ECE3"] }
+
+  /* To add a piece, copy a block above, put a comma after it, and change the details.
+  ,{ id:"rust-leaf", name:"Rust Leaf Co-ord", category:"Co-ord sets", price:null,
+    colour:"Rust red with cream embroidery", desc:"Short description.",
+    details:["Fabric","Matching top and pants","Sizes S to XXL"],
+    sizes:["S","M","L","XL","XXL"], images:[], tones:["#9A4A2E","#EFE6D2"] }
+  */
+];
+/* =====================================================
+   End of editable block. You should not need to change anything below.
+   ===================================================== */
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const nb = s => esc(s).replace(/Co-ord/gi, m => `<span class="nb">${m}</span>`);
+const wa = t => "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(t);
+const money = p => p ? "₹" + Number(p).toLocaleString("en-IN") : "Ask for price";
+const byId = id => PRODUCTS.find(p => p.id===id);
+const HEART = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9-9.3C2 8 4 5.5 7 5.5c1.9 0 3.3 1 5 3 1.7-2 3.1-3 5-3 3 0 5 2.5 4 5.7-1.5 4.7-9 9.3-9 9.3z"/></svg>';
+
+/* saved on this device only */
+const store = {
+  get(k,d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+let cart = store.get("zis_cart", []).filter(i => byId(i.id) && i.qty>0 && i.size);
+let wish = store.get("zis_wish", []).filter(id => byId(id));
+let prof = Object.assign({name:"", address:""}, store.get("zis_profile", {}));
+function badges(){
+  const c = cart.reduce((n,i) => n + i.qty, 0);
+  $("#bCart").textContent = c || ""; $("#bWish").textContent = wish.length || "";
+}
+
+function visual(p, i=0, hover=true){
+  const [a,b] = p.tones || ["#B8AA96","#F7F3EC"];
+  if(!p.images.length) return `<div class="ph" style="background:linear-gradient(${a} 0 62%,${b} 62% 100%)"></div>`;
+  let h = `<div class="ph"><img src="${esc(p.images[i])}" alt="${esc(p.name)}" loading="lazy"></div>`;
+  if(hover && p.images[1] && i===0) h += `<div class="ph two"><img src="${esc(p.images[1])}" alt="${esc(p.name)}, back view" loading="lazy"></div>`;
+  return h;
+}
+function thumb(p){
+  const [a,b] = p.tones || ["#B8AA96","#F7F3EC"];
+  return p.images.length ? `<div class="th"><img src="${esc(p.images[0])}" alt=""></div>`
+    : `<div class="th" style="background:linear-gradient(${a} 0 62%,${b} 62% 100%)"></div>`;
+}
+
+function renderHero(){
+  const im = $("#heroImg"); im.src = HERO.image; im.alt = HERO.alt;
+  $("#hEyebrow").textContent = HERO.eyebrow; $("#hTitle").textContent = HERO.title;
+  $("#hTitle2").textContent = HERO.title2; $("#hLine").textContent = HERO.line; $("#hBtn").textContent = HERO.button;
+}
+
+/* shop: filter = "all", "new" or a category name */
+let flt = "all";
+const categories = () => [...new Set(PRODUCTS.map(p => p.category))];
+function renderMenus(){
+  $("#ddMenu").innerHTML = `<a href="#shop" data-filter="all">All pieces</a>` +
+    categories().map(c => `<a href="#shop" data-filter="${esc(c)}">${esc(c)}</a>`).join("");
+}
+function renderShop(){
+  const chips = [["all","All"]];
+  if(PRODUCTS.some(p => p.new)) chips.push(["new","New Drop"]);
+  categories().forEach(c => chips.push([c,c]));
+  $("#chips").innerHTML = chips.map(([v,l]) => `<button class="chip" aria-pressed="${v===flt}" data-filter="${esc(v)}">${esc(l)}</button>`).join("");
+  const list = PRODUCTS.filter(p => flt==="all" || (flt==="new" ? p.new : p.category===flt));
+  $("#grid").innerHTML = list.length ? list.map(p => {
+    const n = p.images.length;
+    const slides = n ? p.images.map((m,i) => `<button class="slide" data-id="${p.id}" aria-label="View ${esc(p.name)}, photo ${i+1} of ${n}"><img src="${esc(m)}" alt="${esc(p.name)}, photo ${i+1}" loading="lazy"></button>`).join("")
+      : `<button class="slide" data-id="${p.id}" aria-label="View ${esc(p.name)}">${visual(p,0,false)}</button>`;
+    const ctl = n>1 ? `<button class="nav prev" data-slide="-1" aria-label="Previous photo">&lsaquo;</button><button class="nav next" data-slide="1" aria-label="Next photo">&rsaquo;</button>
+      <div class="dots">${p.images.map((_,i) => `<i class="${i===0?"on":""}"></i>`).join("")}</div>` : "";
+    const on = wish.includes(p.id);
+    return `<article class="card"><div class="img"><div class="track" role="group" aria-label="Photos of ${esc(p.name)}">${slides}</div>${ctl}
+      <button class="wish" data-wish="${p.id}" aria-pressed="${on}" aria-label="Add ${esc(p.name)} to wishlist">${HEART}</button></div>
+      <button class="info" data-id="${p.id}"><h3>${nb(p.name)}</h3><div class="meta"><span>${esc(p.category)}</span><span class="price">${money(p.price)}</span></div><span class="cue">Choose size</span></button></article>`;
+  }).join("") : `<p class="empty">New pieces are coming soon.</p>`;
+}
+
+/* product popup */
+let sel = {p:null,size:null};
+function openQuick(id){
+  const p = byId(id); if(!p) return;
+  sel = {p,size:null};
+  const d = $("#qv");
+  const thumbs = p.images.length>1 ? `<div class="thumbs">${p.images.map((m,i) => `<button data-img="${i}" aria-label="${esc((p.imageLabels||[])[i]||"Photo "+(i+1))}" title="${esc((p.imageLabels||[])[i]||"")}"><img src="${esc(m)}" alt=""></button>`).join("")}</div>` : "";
+  const on = wish.includes(p.id);
+  d.innerHTML = `<div class="q"><div><div class="pic" id="qpic">${visual(p,0,false)}</div><p class="piclabel" id="piclabel">${esc((p.imageLabels||[])[0]||"")}</p>${thumbs}</div>
+    <div class="info"><button class="x" aria-label="Close" data-close>×</button>
+      <h3>${nb(p.name)}</h3><div class="price">${money(p.price)}</div>
+      <p>${esc(p.desc)}</p>
+      ${p.details ? `<ul class="det">${p.details.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+      <p class="note">${esc(p.colour)}${p.code ? ". Code: " + esc(p.code) : ""}</p>
+      <div class="row"><span class="lab">Choose your size</span>
+        <div class="sizes">${p.sizes.map(s => `<button class="sz" aria-pressed="false" data-size="${esc(s)}">${esc(s)}</button>`).join("")}</div>
+        <p class="note"><button class="link-inline" type="button" data-open="sizes" data-product="${p.id}">Size guide for this style</button></p></div>
+      <button class="btn" id="cartBtn" type="button">Add to cart</button>
+      <a class="btn ghost" id="orderBtn" href="#">Order now on WhatsApp</a>
+      <p class="err" id="err" role="alert"></p>
+      <button class="wl" type="button" data-wish="${p.id}" aria-pressed="${on}">${HEART}<span>${on ? "Saved to wishlist" : "Add to wishlist"}</span></button>
+      <p class="note policy">${esc(CONFIG.shipNote)} <a href="shipping-policy.html">Shipping &amp; Delivery Policy</a></p>
+      <p class="note policy">${esc(CONFIG.returnNote)} <a href="return-replacement-policy.html">Return &amp; Replacement Policy</a></p></div></div>`;
+  d.showModal();
+}
+
+/* cart, wishlist, wishlist toggle */
+function addCart(id,size){
+  const f = cart.find(i => i.id===id && i.size===size);
+  if(f) f.qty = Math.min(9, f.qty+1); else cart.push({id,size,qty:1});
+  store.set("zis_cart", cart); badges();
+}
+function toggleWish(id){
+  const on = wish.includes(id);
+  wish = on ? wish.filter(x => x!==id) : [...wish, id];
+  store.set("zis_wish", wish); badges();
+  document.querySelectorAll(`[data-wish="${id}"]`).forEach(b => {
+    b.setAttribute("aria-pressed", !on);
+    const s = b.querySelector("span"); if(s) s.textContent = !on ? "Saved to wishlist" : "Add to wishlist";
+  });
+  if($("#drawer").open && drKind==="wish") renderDrawer();
+}
+function cartTotal(){
+  const lines = cart.map(i => ({i, p:byId(i.id)}));
+  return {lines, priced: lines.every(l => l.p.price), total: lines.reduce((n,l) => n + (l.p.price||0) * l.i.qty, 0)};
+}
+function cartMessage(){
+  const {lines, priced, total} = cartTotal();
+  let m = "Hi Zistoro, I'd like to order:\n";
+  lines.forEach(({i,p},k) => {
+    m += `\n${k+1}. ${p.name}${p.code ? " (" + p.code + ")" : ""}\n   Colour: ${p.colour}\n   Size: ${i.size}, Qty: ${i.qty}\n   Price: ${money(p.price)}${p.price && i.qty>1 ? " x " + i.qty : ""}\n`;
+  });
+  if(priced) m += `\nTotal: ${money(total)}\n`;
+  if(prof.name || prof.address){
+    m += "\n";
+    if(prof.name) m += `Name: ${prof.name}\n`;
+    if(prof.address) m += `Delivery address: ${prof.address}\n`;
+  }
+  return m + "\nPlease confirm availability, delivery time and shipping charge.";
+}
+
+/* size guide table for one product */
+function sizeBlock(p){
+  const g = p.sizeGuide, has = g.rows.some(r => r.slice(1).some(v => v));
+  let s = `<table><tr><th>Size</th>${g.columns.map(c => `<th>${esc(c)}</th>`).join("")}</tr>${g.rows.map(r => `<tr><td>${esc(r[0])}</td>${r.slice(1).map(v => `<td>${v ? esc(v) : "&ndash;"}</td>`).join("")}</tr>`).join("")}</table>`;
+  if(has && CONFIG.sizeUnit) s += `<p class="note">Measurements in ${esc(CONFIG.sizeUnit)}.</p>`;
+  if(!has) s += `<p class="note">Measurements for this style are not listed yet. <a href="#" data-wa="Hi Zistoro, could you share the size measurements for ${esc(p.name)}?">Ask us on WhatsApp</a>.</p>`;
+  if(g.fit) s += `<p class="note">Fit: ${esc(g.fit)}</p>`;
+  return s;
+}
+
+/* side drawer */
+let drKind = null, drProd = null;
+function openDrawer(kind, prod){ drKind = kind; drProd = prod || null; renderDrawer(); const d = $("#drawer"); if(!d.open) d.showModal(); }
+function renderDrawer(){
+  const t = $("#drTitle"), b = $("#drBody"), f = $("#drFoot");
+  if(drKind==="cart"){
+    t.textContent = "Cart";
+    const {lines, priced, total} = cartTotal();
+    if(!lines.length){
+      b.innerHTML = `<p class="empty-dr">Your cart is empty.</p>`;
+      f.innerHTML = `<a class="btn ghost" href="#shop" data-closedr>Continue shopping</a>`; return;
+    }
+    b.innerHTML = lines.map(({i,p},k) => `<div class="ln">${thumb(p)}<div><b>${nb(p.name)}</b>
+      <small>Size ${esc(i.size)} &middot; ${money(p.price)}</small>
+      <div class="acts"><div class="qty"><button data-qty="-1" data-k="${k}" aria-label="Decrease quantity">&minus;</button><span>${i.qty}</span><button data-qty="1" data-k="${k}" aria-label="Increase quantity">+</button></div></div></div>
+      <button class="rm" data-rmc="${k}" aria-label="Remove ${esc(p.name)}">&times;</button></div>`).join("");
+    f.innerHTML = `<div class="tot"><span>Total</span><span>${priced ? money(total) : "On request"}</span></div>
+      <p class="note">Shipping charge and delivery time are confirmed on WhatsApp.</p>
+      <p class="note">${esc(CONFIG.shipLine)}</p>
+      <p class="note policy"><a href="shipping-policy.html">Shipping &amp; Delivery Policy</a> &middot; <a href="return-replacement-policy.html">Return &amp; Replacement Policy</a></p>
+      <button class="btn" type="button" data-checkout>Order on WhatsApp</button>
+      <button class="link" type="button" data-clear>Clear cart</button>`;
+  } else if(drKind==="wish"){
+    t.textContent = "Wishlist";
+    if(!wish.length){
+      b.innerHTML = `<p class="empty-dr">Tap the heart on a piece to save it here.</p>`;
+      f.innerHTML = `<a class="btn ghost" href="#shop" data-closedr>Browse the collection</a>`; return;
+    }
+    b.innerHTML = wish.map(id => { const p = byId(id); return `<div class="ln">${thumb(p)}<div><b>${nb(p.name)}</b>
+      <small>${money(p.price)}</small>
+      <div class="acts"><button class="btn ghost" style="padding:10px 16px" data-id="${p.id}">Choose size</button></div></div>
+      <button class="rm" data-rmw="${p.id}" aria-label="Remove ${esc(p.name)}">&times;</button></div>`; }).join("");
+    f.innerHTML = "";
+  } else if(drKind==="profile"){
+    t.textContent = "Profile";
+    b.innerHTML = `<p class="note" style="margin-top:16px">No account or password needed. These details are saved on this device only and are added to your WhatsApp order message.</p>
+      <div class="field"><label for="pfName">Your name</label><input id="pfName" autocomplete="name" value="${esc(prof.name)}"></div>
+      <div class="field"><label for="pfAddr">Delivery address with pincode</label><textarea id="pfAddr" autocomplete="street-address">${esc(prof.address)}</textarea></div>
+      <div class="pf-links"><button type="button" data-open="wish">My wishlist (${wish.length})</button><button type="button" data-open="cart">My cart (${cart.reduce((n,i)=>n+i.qty,0)})</button></div>`;
+    f.innerHTML = `<button class="btn" type="button" data-saveprof>Save details</button><p class="note" id="pfMsg" role="status" style="text-align:center;margin-top:10px"></p>`;
+  } else if(drKind==="order"){
+    t.textContent = "How to order";
+    b.innerHTML = `<p class="lede" style="margin-top:16px">No sign-up, no checkout forms. Just a chat.</p><ol class="steps">${CONFIG.steps.map((s,i) => `<li><b>${i+1}</b><p>${esc(s)}</p></li>`).join("")}</ol>`;
+    f.innerHTML = "";
+  } else if(drKind==="sizes"){
+    t.textContent = "Size guide";
+    const list = drProd && byId(drProd) ? [byId(drProd)] : PRODUCTS;
+    b.innerHTML = list.map(p => `<h3 class="dr-sub">${nb(p.name)}</h3>${sizeBlock(p)}`).join("") + `<p class="note" style="margin-top:16px">${esc(CONFIG.sizeNote)}</p>`;
+    f.innerHTML = "";
+  } else if(drKind==="faq"){
+    t.textContent = "FAQ";
+    b.innerHTML = CONFIG.faq.map(q => `<details><summary>${esc(q[0])}</summary><p>${esc(q[1])}${q[2] ? ` <a class="more" href="${esc(q[2])}">Read the full policy</a>` : ""}</p></details>`).join("");
+    f.innerHTML = "";
+  } else {
+    t.textContent = "Menu";
+    const sub = categories().map(c => `<a class="menu-sub" href="#shop" data-filter="${esc(c)}">${esc(c)}</a>`).join("");
+    b.innerHTML = `<div class="menu-list"><a href="#shop" data-filter="new">New Drop</a><a href="#shop" data-filter="all">Shop</a>
+      <span class="menu-h">Collections</span>${sub}
+      <a href="#about">About</a><button type="button" data-open="faq">FAQ</button><a href="#contact">Contact</a></div>`;
+    f.innerHTML = "";
+  }
+}
+
+/* clicks */
+document.addEventListener("click", e => {
+  const t = e.target;
+  const fl = t.closest("[data-filter]");
+  if(fl){ flt = fl.dataset.filter; renderShop(); if(document.activeElement && document.activeElement.blur) document.activeElement.blur(); }
+  if(t.closest("#drawer a[href^='#']:not([data-wa])")) $("#drawer").close();
+  const op = t.closest("[data-open]"); if(op){ if($("#qv").open) $("#qv").close(); openDrawer(op.dataset.open, op.dataset.product); return; }
+  if(t.closest("[data-closedr]")){ $("#drawer").close(); return; }
+  if(t === $("#drawer")){ $("#drawer").close(); return; }
+  const sl = t.closest("[data-slide]");
+  if(sl){ const tr = sl.closest(".img").querySelector(".track"); tr.scrollBy({left: tr.clientWidth * +sl.dataset.slide, behavior:"smooth"}); return; }
+  const wl = t.closest("[data-wish]"); if(wl){ toggleWish(wl.dataset.wish); return; }
+  const pr = t.closest("[data-id]"); if(pr){ if($("#drawer").open) $("#drawer").close(); openQuick(pr.dataset.id); return; }
+  const th = t.closest("[data-img]"); if(th){ $("#qpic").innerHTML = visual(sel.p, +th.dataset.img, false); $("#piclabel").textContent = (sel.p.imageLabels||[])[+th.dataset.img] || ""; return; }
+  const sz = t.closest("[data-size]");
+  if(sz){ sel.size = sz.dataset.size;
+    document.querySelectorAll(".sz").forEach(b => b.setAttribute("aria-pressed", b===sz));
+    $("#err").textContent = ""; return; }
+  if(t.closest("#cartBtn")){
+    if(!sel.size){ $("#err").textContent = "Please choose a size first."; return; }
+    addCart(sel.p.id, sel.size); $("#qv").close(); openDrawer("cart"); return; }
+  if(t.closest("#orderBtn")){ e.preventDefault();
+    if(!sel.size){ $("#err").textContent = "Please choose a size first."; return; }
+    const p = sel.p;
+    window.open(wa(`Hi Zistoro, I'd like to order:\n${p.name}${p.code ? " (" + p.code + ")" : ""}\nColour: ${p.colour}\nSize: ${sel.size}\nPrice: ${money(p.price)}\nPlease confirm availability and delivery.`), "_blank", "noopener"); return; }
+  const qt = t.closest("[data-qty]");
+  if(qt){ const it = cart[+qt.dataset.k]; if(it){ it.qty += +qt.dataset.qty; if(it.qty<1) cart.splice(+qt.dataset.k,1); if(it && it.qty>9) it.qty = 9; store.set("zis_cart",cart); badges(); renderDrawer(); } return; }
+  const rc = t.closest("[data-rmc]"); if(rc){ cart.splice(+rc.dataset.rmc,1); store.set("zis_cart",cart); badges(); renderDrawer(); return; }
+  const rw = t.closest("[data-rmw]"); if(rw){ toggleWish(rw.dataset.rmw); return; }
+  if(t.closest("[data-clear]")){ cart = []; store.set("zis_cart",cart); badges(); renderDrawer(); return; }
+  if(t.closest("[data-checkout]")){ if(cart.length) window.open(wa(cartMessage()), "_blank", "noopener"); return; }
+  if(t.closest("[data-saveprof]")){
+    prof = {name: $("#pfName").value.trim(), address: $("#pfAddr").value.trim()};
+    store.set("zis_profile", prof); $("#pfMsg").textContent = "Saved on this device."; return; }
+  const w = t.closest("[data-wa]"); if(w){ e.preventDefault(); window.open(wa(w.dataset.wa), "_blank", "noopener"); return; }
+  if(t.closest("[data-close]")) $("#qv").close();
+  if(t === $("#qv")) $("#qv").close();
+});
+
+document.addEventListener("scroll", e => {
+  const tr = e.target; if(!tr.classList || !tr.classList.contains("track")) return;
+  const i = Math.round(tr.scrollLeft / tr.clientWidth);
+  tr.parentElement.querySelectorAll(".dots i").forEach((d,k) => d.classList.toggle("on", k===i));
+}, true);
+
+/* open the matching row when a link points to it */
+function openTarget(hash){
+  const el = hash && hash.length>1 ? document.querySelector(hash) : null;
+  if(el && el.tagName==="DETAILS") el.open = true;
+}
+document.addEventListener("click", e => {
+  const a = e.target.closest('a[href^="#"]'); if(a) openTarget(a.getAttribute("href"));
+}, true);
+window.addEventListener("hashchange", () => openTarget(location.hash));
+openTarget(location.hash);
+
+/* static sections */
+const igUrl = "https://www.instagram.com/" + CONFIG.instagram;
+$("#instaLink").href = igUrl;
+$("#instaLink").textContent = "Instagram @" + CONFIG.instagram;
+$("#contactLine").innerHTML = "WhatsApp " + esc(ZIS.contact.whatsappDisplay) + (CONFIG.email ? ` &middot; <a href="mailto:${esc(CONFIG.email)}">${esc(CONFIG.email)}</a>` : "");
+$("#fWa").textContent = "WhatsApp " + ZIS.contact.whatsappDisplay;
+$("#fMail").href = "mailto:" + CONFIG.email; $("#fMail").textContent = CONFIG.email;
+$("#fIg").href = igUrl; $("#fIg").textContent = ZIS.contact.instagramHandle;
+$("#yr").textContent = new Date().getFullYear();
+renderHero(); renderMenus(); renderShop(); badges();
+
+</script>
+</body>
+</html>
